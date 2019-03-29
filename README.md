@@ -44,11 +44,11 @@
     ```
     $ kubectl get all -n dev
     ```
-    [all-dev](images/all-dev.jpg)
+    ![all-dev](images/all-dev.jpg)
     ```
     $ kubectl get ingress -n dev
     ```
-    [ingress](ingress.jpg)
+    ![ingress](ingress.jpg)
 * Append ```mohan.local.com``` in ```/etc/hosts```
     ```
     127.0.0.1	localhost mohan.local.com
