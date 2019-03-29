@@ -1,0 +1,33 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: app-ingress
+  namespace: dev
+  annotations:
+      nginx-ingress.kubernetes.io/rewrite-target: /
+      # nginx.ingress.kubernetes.io/secure-backends: "true"
+      # nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+
+spec:
+  rules:
+  - host: mohan.local.com
+    http:
+      paths:
+        - path: /apple
+          backend:
+            serviceName: apple-service
+            servicePort: 5678
+  - host: mohan.local.com
+    http:  
+      paths:
+        - path: /banana
+          backend:
+            serviceName: banana-service
+            servicePort: 5678
+  - host: mohan.local.com
+    http:  
+      paths:
+        - path: /hello
+          backend:
+            serviceName: hello-world-service
+            servicePort: 8080
