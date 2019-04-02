@@ -80,3 +80,5 @@
     * Connection #0 to host mohan.local.com left intact
     {"status":"hello"}%
     ```
+
+    For Ingress Update documentation [click here](update-ingress.md)
