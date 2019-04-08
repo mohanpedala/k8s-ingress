@@ -23,7 +23,7 @@
 * Create a file [ns-dev.yaml](ns-dev.yaml)
 * Deploy the ```ns-dev``` resource
     ```
-    $ kubectl apply -f ns-dev.yaml 
+    $ kubectl apply -f ns-dev.yaml
     ```
 * Create 3 services and mention the namespaces inside the yaml files
     - [hello.yaml](hello.yaml)
@@ -81,4 +81,5 @@
     {"status":"hello"}%
     ```
 
-#### For Ingress Update documentation [click here](update-ingress.md)
+### For Ingress Update documentation [click here](documentation/update-ingress.md)
+### Hide Server-Header [click here](documentation/hide-header.md)
