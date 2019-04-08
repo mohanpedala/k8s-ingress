@@ -16,7 +16,7 @@
 4. Wait for 3-5 minutes and check the version
     - Monitor pods using ```watch``` to visualize the new pod creation and termination of old pod.
 
-    ![update-process-pods-term-creation](images/update-process-pods-term-creation.jpg)
+    ![update-process-pods-term-creation](../images/update-process-pods-term-creation.jpg)
     - Once the new pod is created and old pod is terminated we will see the below output.
 
     ![new-ingress-pod](../images/new-ingress-pod.jpg)
