@@ -11,3 +11,5 @@
   data:
      server-tokens: "False"
   ```
+
+Reference [nginx-configuration configmap](https://kubernetes.github.io/ingress-nginx/user-guide/nginx-configuration/configmap/)
