@@ -82,4 +82,4 @@
     ```
 
 ### For Ingress Update documentation [click here](documentation/update-ingress.md)
-### Hide Server-Header [click here](documentation/hide-header.md)
+### Hide Server-Header [click here](documentation/custom-configuration.md)

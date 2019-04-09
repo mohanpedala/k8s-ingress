@@ -1,6 +1,7 @@
 ### Hide the Server-Header
-* Add the below ConfigMap to `mandatory.yml`
-  ```
+* Create a file with below configuration or you can refer `ingress-configmap.yaml`
+
+  ```yaml
   kind: ConfigMap
   apiVersion: v1
   metadata:
