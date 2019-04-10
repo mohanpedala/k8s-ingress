@@ -7,6 +7,11 @@ metadata:
       nginx-ingress.kubernetes.io/rewrite-target: /
       # nginx.ingress.kubernetes.io/secure-backends: "true"
       # nginx.ingress.kubernetes.io/ssl-passthrough: "true"
+      nginx.ingress.kubernetes.io/server-snippet: |
+          set $block_common_exploits 0;
+          if ($query_string ~ "(<|%3C).*script.*(>|%3E)") {
+              set $block_common_exploits 1;
+          }
 
 spec:
   rules:
@@ -18,14 +23,14 @@ spec:
             serviceName: apple-service
             servicePort: 5678
   - host: mohan.local.com
-    http:  
+    http:
       paths:
         - path: /banana
           backend:
             serviceName: banana-service
             servicePort: 5678
   - host: mohan.local.com
-    http:  
+    http:
       paths:
         - path: /hello
           backend:

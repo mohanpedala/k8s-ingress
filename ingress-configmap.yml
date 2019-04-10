@@ -9,8 +9,8 @@ data:
   # Turn off nginx header
   server-tokens: "False"
   # Custom code snippet
-  server-snippet: |
-    set $block_common_exploits 0;
-    if ($query_string ~ "(<|%3C).*script.*(>|%3E)") {
-        set $block_common_exploits 1;
-    }
+  # server-snippet: |
+  #   set $block_common_exploits 0;
+  #   if ($query_string ~ "(<|%3C).*script.*(>|%3E)") {
+  #       set $block_common_exploits 1;
+  #   }
