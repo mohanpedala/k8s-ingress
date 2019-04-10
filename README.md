@@ -6,38 +6,28 @@
     ![enable-k8s](images/enable-k8s.jpg?raw=true)
 
 * create a nginx-controller using the below command.
-    ```
-    kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/mandatory.yaml
+    ```bash
+    kubectl apply -f mandatory.yaml
     ```
 * Enable ingress add-on.
-    ```
-    kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/master/deploy/provider/cloud-generic.yaml
+    ```bash
+    kubectl apply -f cloud-generic.yaml
     ```
 * Verify the nginx-controller pod
-    ```
+    ```bash
     kubectl get pods --all-namespaces -l app=ingress-nginx
     ```
 
 ### Service creation
 #### Create 3 services to deploy on a namespace dev
 * Create a file [ns-dev.yaml](ns-dev.yaml)
-* Deploy the ```ns-dev``` resource
-    ```
-    $ kubectl apply -f ns-dev.yaml
-    ```
-* Create 3 services and mention the namespaces inside the yaml files
-    - [hello.yaml](hello.yaml)
-    - [banana.yaml](banana.yaml)
-    - [apple.yaml](apple.yaml)
-* Deploy the pods
-    ```
-    $ kubectl apply -f hello.yaml
-    $ kubectl apply -f banana.yaml
-    $ kubectl apply -f apple.yaml
+* Deploy the microservices using the configuration in micro-services.yaml
+    ```bash
+    $ kubectl apply -f micro-services.yaml
     ```
 * Create [ingress.yaml](ingress.yaml) to route the requests to ```/hello``` ```/banana``` ```/apple```
 * Deploy ```ingress rules```
-    ```
+    ```bash
     $ kubectl apply -f ingress.yaml
     ```
 * Check the pods and ingress rule
