@@ -7,12 +7,12 @@ metadata:
       nginx-ingress.kubernetes.io/rewrite-target: /
       # nginx.ingress.kubernetes.io/secure-backends: "true"
       # nginx.ingress.kubernetes.io/ssl-passthrough: "true"
-      nginx.ingress.kubernetes.io/server-snippet: |
-        set $block_common_exploits 0;
-        if ($query_string ~ "(<|%3C).*script.*(>|%3E)") {
-            set $block_common_exploits 1;
-        }
-
+      nginx.ingress.kubernetes.io/proxy-buffering: "on"
+      # nginx.ingress.kubernetes.io/server-snippet: |
+      #   # add_header Strict-Transport-Security "max-age=86400; includeSubDomains" always;
+      #   set $block_common_exploits 0;
+      #   if ($query_string ~ "(<|%3C).*script.*(>|%3E)") {
+      #       set $block_common_exploits 1;
 spec:
   rules:
   - host: mohan.local.com
